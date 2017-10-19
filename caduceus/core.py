@@ -32,14 +32,14 @@ def build_snakes(common_file, sci_file):
 
     return snakes
 
-def print_snakes_by_weight(snakes):
+def print_snakes_by_length(snakes):
     '''
-    Prints common names of snakes, one per line, sorted by weight
+    Prints common names of snakes, one per line, sorted by length
     Args:
         snakes: a list of Snake objects
     '''
     sorterer = SnakeSorter(snakes)
-    sorterer.sort_by_weight()
+    sorterer.sort_by_length()
     
     for snek in sorterer.sorted_snakes:
-        print('{name}: {wt}g'.format(name=snek.common_name, wt=snek.weight)) 
+        print('{name}: {lt}g'.format(name=snek.common_name, lt=snek.length)) 
